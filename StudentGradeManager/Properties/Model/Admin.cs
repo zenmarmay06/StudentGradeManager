@@ -3,7 +3,7 @@
 
     namespace StudentGradeManager.Models
     {
-        public class Admin:User
+        public class Admin
         {
             public int AdminID { get; set; }
 

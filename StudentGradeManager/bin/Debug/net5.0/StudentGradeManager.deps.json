@@ -34,7 +34,6 @@
       "StudentGradeManager/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.17",
-          "Microsoft.IdentityModel.JsonWebTokens": "8.2.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "System.IdentityModel.Tokens.Jwt": "8.2.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",

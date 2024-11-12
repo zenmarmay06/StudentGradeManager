@@ -1,23 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using StudentGradeManager.Services;
 using StudentGradeManager.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace StudentGradeManager.Controllers
 {
-   
-        [Route("api/[controller]")]
-        [ApiController]
-        public class LoginController : ControllerBase
-        {
-            private readonly JwtService _jwtService;
-
-            public LoginController(JwtService jwtService)
-            {
-                _jwtService = jwtService;
-            }
-
+    [Route("api/[controller]")]
+    [ApiController]
+    public class LoginController : ControllerBase
+    {
         private static List<Admin> admins = new List<Admin>()
         {
             new Admin {AdminID=2024001, Name="Mary Jane Embodo", Email="maryjane@gmail.com", Password="password1"},
@@ -79,6 +70,7 @@ namespace StudentGradeManager.Controllers
         public static List<Student> Students => students;
         public static List<Teacher> Teachers => teachers;
 
+
         [HttpPost("register/admin")]
         public ActionResult RegisterAdmin([FromBody] RegisterAdmin model)
         {
@@ -90,11 +82,8 @@ namespace StudentGradeManager.Controllers
             if (!admins.Any(a => a.Email == model.Email))
             {
                 var newAdminId = admins.Any() ? admins.Max(a => a.AdminID) + 1 : 2024001;
-                var newAdmin = new Admin { AdminID = newAdminId, Name = model.FullName, Email = model.Email, Password = model.Password };
-                admins.Add(newAdmin);
-
-                newAdmin.Token = _jwtService.GenerateToken(newAdmin);
-                return Ok(newAdmin); // Send admin data with token
+                admins.Add(new Admin { AdminID = newAdminId, Name = model.FullName, Email = model.Email, Password = model.Password });
+                return Ok("Admin account created successfully.");
             }
 
             return BadRequest("Admin with this email already exists.");
@@ -111,11 +100,8 @@ namespace StudentGradeManager.Controllers
             if (!teachers.Any(t => t.Email == model.Email))
             {
                 var newTeacherId = teachers.Any() ? teachers.Max(t => t.TeacherID) + 1 : 1;
-                var newTeacher = new Teacher { TeacherID = newTeacherId, Name = model.FullName, Email = model.Email, Password = model.Password };
-                teachers.Add(newTeacher);
-
-                newTeacher.Token = _jwtService.GenerateToken(newTeacher);
-                return Ok(newTeacher); // Send teacher data with token
+                teachers.Add(new Teacher { TeacherID = newTeacherId, Name = model.FullName, Email = model.Email, Password = model.Password });
+                return Ok("Teacher account created successfully.");
             }
 
             return BadRequest("Teacher with this email already exists.");
@@ -132,43 +118,57 @@ namespace StudentGradeManager.Controllers
             if (!students.Any(s => s.Email == model.Email))
             {
                 var newStudentId = students.Any() ? students.Max(s => s.StudentID) + 1 : 202401;
-                var newStudent = new Student { StudentID = newStudentId, Name = model.FullName, Email = model.Email, Password = model.Password, YearSection = model.YearSection };
-                students.Add(newStudent);
-
-                newStudent.Token = _jwtService.GenerateToken(newStudent);
-                return Ok(newStudent); // Send student data with token
+                students.Add(new Student { StudentID = newStudentId, Name = model.FullName, Email = model.Email, Password = model.Password, YearSection = model.YearSection });
+                return Ok("Student account created successfully.");
             }
 
             return BadRequest("Student with this email already exists.");
         }
 
-        [HttpPost("login")]
-        public ActionResult Login([FromBody] User loginRequest, [FromQuery] string role)
+        [HttpPost("LoginAdmin")]
+        public ActionResult Login([FromBody] LoginAdmin model)
         {
-            if (string.IsNullOrEmpty(role))
+            var admin = admins.FirstOrDefault(a => a.Email == model.Email && a.Password == model.Password);
+
+
+            if (admin != null)
             {
-                return BadRequest("Role is required.");
+                return Ok("Admin logged in successfully.");
             }
 
-            // Determine the correct list to search based on role and cast to User
-            User user = role.ToLower() switch
-            {
-                "admin" => (User)admins.FirstOrDefault(a => a.Email == loginRequest.Email && a.Password == loginRequest.Password),
-                "teacher" => (User)teachers.FirstOrDefault(t => t.Email == loginRequest.Email && t.Password == loginRequest.Password),
-                "student" => (User)students.FirstOrDefault(s => s.Email == loginRequest.Email && s.Password == loginRequest.Password),
-                _ => null
-            };
-
-            if (user != null)
-            {
-                // Generate JWT token for authenticated user
-                user.Token = _jwtService.GenerateToken(user);
-                return Ok(user);
-            }
 
             return Unauthorized("Invalid email or password.");
         }
 
+        [HttpPost("LoginTeacher")]
+        public ActionResult Login([FromBody] LoginTeacher model)
+        {
+
+            var teacher = teachers.FirstOrDefault(t => t.Email == model.Email && t.Password == model.Password);
+
+            if (teacher != null)
+            {
+                return Ok("Teacher logged in successfully.");
+            }
+
+
+            return Unauthorized("Invalid email or password.");
+        }
+
+        [HttpPost("LoginStudent")]
+        public ActionResult Login([FromBody] LoginStudent model)
+        {
+
+            var student = students.FirstOrDefault(s => s.Email == model.Email && s.Password == model.Password);
+
+
+            if (student != null)
+            {
+                return Ok("Student logged in successfully.");
+            }
+
+            return Unauthorized("Invalid email or password.");
+        }
 
     }
 }

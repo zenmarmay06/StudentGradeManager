@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 namespace StudentGradeManager.Models
 {
-    public class Student:User
+    public class Student
     {
         public int StudentID { get; set; }
 

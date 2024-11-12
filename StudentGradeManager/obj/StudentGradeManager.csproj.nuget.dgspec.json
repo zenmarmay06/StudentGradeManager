@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj": {}
+    "D:\\OOP\\StudentGradeManager\\StudentGradeManager - Copy (2)\\StudentGradeManager\\StudentGradeManager.csproj": {}
   },
   "projects": {
-    "D:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj": {
+    "D:\\OOP\\StudentGradeManager\\StudentGradeManager - Copy (2)\\StudentGradeManager\\StudentGradeManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+        "projectUniqueName": "D:\\OOP\\StudentGradeManager\\StudentGradeManager - Copy (2)\\StudentGradeManager\\StudentGradeManager.csproj",
         "projectName": "StudentGradeManager",
-        "projectPath": "D:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+        "projectPath": "D:\\OOP\\StudentGradeManager\\StudentGradeManager - Copy (2)\\StudentGradeManager\\StudentGradeManager.csproj",
         "packagesPath": "C:\\Users\\Zende\\.nuget\\packages\\",
-        "outputPath": "D:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\obj\\",
+        "outputPath": "D:\\OOP\\StudentGradeManager\\StudentGradeManager - Copy (2)\\StudentGradeManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zende\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,26 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[5.0.17, )"
-            },
-            "Microsoft.IdentityModel.JsonWebTokens": {
-              "target": "Package",
-              "version": "[8.2.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[5.6.3, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[8.2.0, )"
-            }
-          },
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -67,14 +49,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
