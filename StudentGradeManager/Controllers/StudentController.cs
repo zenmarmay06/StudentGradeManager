@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using StudentGradeManager.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace StudentGradeManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class StudentController : ControllerBase
     {
         private List<Teacher> teachers => LoginController.Teachers;

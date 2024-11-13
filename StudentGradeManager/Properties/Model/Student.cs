@@ -19,7 +19,6 @@ namespace StudentGradeManager.Models
         [Required(ErrorMessage = "Password is required.")]
         public string Password { get; set; }
         public string YearSection {get; set;}
-        public string Token { get; set; }
 
     }
 }

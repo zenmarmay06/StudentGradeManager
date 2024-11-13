@@ -1,4 +1,5 @@
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using System.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,13 +29,47 @@ namespace StudentGradeManager
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add authentication services and specify the JWT Bearer options
+            var key = Encoding.ASCII.GetBytes(Configuration["Jwt:SecretKey"]);
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidIssuer = Configuration["Jwt:Issuer"],           // e.g., "your-app-name"
+                ValidAudience = Configuration["Jwt:Audience"],     // e.g., "your-app-audience"
+                IssuerSigningKey = new SymmetricSecurityKey(key)   // The key should be the same as the one used to sign the token
+            };
+                });
 
             services.AddControllers();
+
+            // Add authorization services with role-based policies
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminPolicy", policy =>
+                    policy.RequireRole("Admin"));
+                options.AddPolicy("TeacherPolicy", policy =>
+                    policy.RequireRole("Teacher"));
+                options.AddPolicy("StudentPolicy", policy =>
+                    policy.RequireRole("Student"));
+            });
+
+            // Add controllers and other services
+            services.AddControllers();
+
+            // Add Swagger for API documentation
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudentGradeManager", Version = "v1" });
             });
         }
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -44,17 +80,31 @@ namespace StudentGradeManager
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "StudentGradeManager v1"));
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
 
+            // HTTPS Redirection
             app.UseHttpsRedirection();
 
+            // Routing (necessary to map requests to controllers)
             app.UseRouting();
 
-            app.UseAuthorization();
+            // Use authentication middleware
+            app.UseAuthentication();  // This enables the authentication middleware
 
+            // Use authorization middleware
+            app.UseAuthorization();  // Ensure this is called after UseAuthentication
+
+            // Map controllers
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
         }
+
+
     }
 }

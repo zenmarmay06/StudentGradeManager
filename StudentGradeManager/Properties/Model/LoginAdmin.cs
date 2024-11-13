@@ -10,14 +10,8 @@ namespace StudentGradeManager.Models
         
         public string Email { get; set; }
         public string Password { get; set; }
-        public string Token { get; set; }
-        public DateTime TokenExpiration { get; set; }
        
-        public string PlatForm { get; set; }
 
-        public bool IsValid() =>
-            !string.IsNullOrWhiteSpace(Email) &&
-            !string.IsNullOrWhiteSpace(Password);
     }
 
 }

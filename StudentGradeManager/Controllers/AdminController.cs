@@ -5,11 +5,13 @@ using StudentGradeManager.Utility;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace StudentGradeManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+  
     public class AdminController : ControllerBase
     {
 
@@ -60,7 +62,6 @@ namespace StudentGradeManager.Controllers
     new CourseAssignment { TeacherID = 20, CourseID = 20, CourseName = "Statistics", StudentIDs = new List<int> { 202419, 202420 }, Semester = "Second Semester" }
 };
         public static List<CourseAssignment> CourseAssignments => courseAssignments;
-
         private static List<StudentGrade> studentGrades = new List<StudentGrade>();
         // Access the lists from LoginController without redeclaring
         private List<Teacher> teachers => LoginController.Teachers;
@@ -69,6 +70,7 @@ namespace StudentGradeManager.Controllers
 
         // Admin CRUD Operations
         [HttpGet("Admins")]
+
         public ActionResult<IEnumerable<Admin>> GetAdmins()
         {
             return Ok(admins);
@@ -84,9 +86,6 @@ namespace StudentGradeManager.Controllers
             }
             return Ok(admin);
         }
-
-
-
         [HttpPut("Admins/{id}")]
         public ActionResult PutAdmin(int id, [FromBody] Admin updatedAdmin)
         {
@@ -199,10 +198,6 @@ namespace StudentGradeManager.Controllers
 
             return gradesForStudent; // Returns List<double>
         }
-
-
-
-
         [HttpPut("Students/{id}")]
         public ActionResult PutStudent(int id, [FromBody] Student updatedStudent)
         {
@@ -262,9 +257,6 @@ namespace StudentGradeManager.Controllers
             }
             return Ok(teacher);
         }
-
-
-
         [HttpPut("Teachers/{id}")]
         public ActionResult PutTeacher(int id, [FromBody] Teacher updatedTeacher)
         {
@@ -358,8 +350,6 @@ namespace StudentGradeManager.Controllers
 
             return Ok(courseDetails);
         }
-
-
         [HttpPost("Courses/Add")]
         public ActionResult<List<object>> AddCourses([FromBody] List<Course> newCourses)
         {
@@ -397,8 +387,6 @@ namespace StudentGradeManager.Controllers
 
             return Ok(addedCourses); // Return the list of added courses
         }
-
-
         [HttpPut("Courses/{id}")]
         public ActionResult PutCourse(int id, [FromBody] Course updatedCourse)
         {
@@ -426,8 +414,6 @@ namespace StudentGradeManager.Controllers
 
             return Ok($"Course name updated to '{course.CourseName}' successfully.");
         }
-
-
         [HttpDelete("Courses/{id}")]
         public ActionResult DeleteCourse(int id)
         {
@@ -449,12 +435,6 @@ namespace StudentGradeManager.Controllers
 
             return NoContent(); // Successfully deleted
         }
-
-
-
-
-
-
         [HttpGet("GetAllCourseAssignments")]
         public ActionResult<IEnumerable<object>> GetAllCourseAssignments()
         {
@@ -478,7 +458,6 @@ namespace StudentGradeManager.Controllers
 
             return Ok(assignments);
         }
-
         // Add course assignment to a student
         [HttpPost("AssignCourseToStudent")]
         public ActionResult AssignCourseToStudent(int studentId, int courseId, int teacherId, string semester, string yearSection)
@@ -516,8 +495,6 @@ namespace StudentGradeManager.Controllers
 
             return Ok("Course assigned to student successfully.");
         }
-
-
         // Update an existing course assignment for a student
         [HttpPut("UpdateStudentCourseAssignment")]
         public ActionResult UpdateStudentCourseAssignment(int studentId, int courseId, int teacherId, string newSemester)
@@ -533,7 +510,6 @@ namespace StudentGradeManager.Controllers
             assignment.Semester = newSemester;
             return Ok("Course assignment updated successfully.");
         }
-
         // Remove a student from a course assignment
         [HttpDelete("RemoveStudentFromCourse/{courseId}")]
         public ActionResult RemoveStudentFromCourse(int courseId, int studentId)
@@ -558,21 +534,10 @@ namespace StudentGradeManager.Controllers
 
             return Ok("Student removed from course successfully.");
         }
-
-
-
-
-
-
         private string GetStudentNameById(int studentId)
         {
             var student = students.FirstOrDefault(s => s.StudentID == studentId);
             return student != null ? student.Name : "Unknown Student";
-        }
-
-
-
-
-       
+        }      
     }
 }

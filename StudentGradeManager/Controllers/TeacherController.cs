@@ -5,13 +5,16 @@ using StudentGradeManager.Utility;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace StudentGradeManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+   
     public class TeacherController : ControllerBase
     {
+       
         private List<Teacher> teachers => LoginController.Teachers;
 
         private List<Student> students => LoginController.Students;
@@ -145,6 +148,82 @@ namespace StudentGradeManager.Controllers
 
             return NoContent();
         }
+        [HttpPost("{teacherId}/InputGrades")]
+        public ActionResult InputGrades(int teacherId, [FromBody] UpdateGradeRequest inputGradesRequest)
+        {
+            // Check if the teacher exists
+            var teacher = teachers.FirstOrDefault(t => t.TeacherID == teacherId);
+            if (teacher == null)
+            {
+                return NotFound("Teacher not found.");
+            }
+
+            // Retrieve the course assignment for this TeacherID
+            var courseAssignment = courseAssignments.FirstOrDefault(ca => ca.TeacherID == teacherId);
+            if (courseAssignment == null)
+            {
+                return NotFound("No course assignment found for this teacher.");
+            }
+
+            // Check if the student is assigned to the teacher's course
+            if (!courseAssignment.StudentIDs.Contains(inputGradesRequest.StudentID))
+            {
+                return BadRequest("The student ID does not belong to the specified course assigned to the teacher.");
+            }
+
+            // Validate grade ranges (0 to 100)
+            if (inputGradesRequest.MidtermGrade < 0 || inputGradesRequest.MidtermGrade > 100 ||
+                inputGradesRequest.FinalGrade < 0 || inputGradesRequest.FinalGrade > 100)
+            {
+                return BadRequest("Grades must be between 0 and 100.");
+            }
+
+            // Check if the grade entry for the student already exists
+            var existingGradeEntry = studentGrades.FirstOrDefault(g => g.StudentID == inputGradesRequest.StudentID &&
+                                                                       g.CourseId == courseAssignment.CourseID &&
+                                                                       g.Semester.Equals(inputGradesRequest.Semester, StringComparison.OrdinalIgnoreCase));
+
+            // Create the response object
+            var response = new
+            {
+                StudentName = GetStudentNameById(inputGradesRequest.StudentID), // Fetch the student name
+                CourseID = courseAssignment.CourseID, // Use the CourseID from the assignment
+                Semester = inputGradesRequest.Semester,
+                MidtermGrade = inputGradesRequest.MidtermGrade,
+                FinalGrade = inputGradesRequest.FinalGrade
+            };
+
+            if (existingGradeEntry != null)
+            {
+                // If a grade entry already exists, return a conflict response
+                return Conflict(new
+                {
+                    Message = "Grades already exist for this student in the specified course and semester.",
+                    Result = response
+                });
+            }
+            else
+            {
+                // Create a new grade entry for the student
+                var newGrade = new StudentGrade
+                {
+                    StudentID = inputGradesRequest.StudentID,
+                    StudentName = GetStudentNameById(inputGradesRequest.StudentID),
+                    CourseId = courseAssignment.CourseID,
+                    Semester = inputGradesRequest.Semester,
+                    MidtermGrade = inputGradesRequest.MidtermGrade,
+                    FinalGrade = inputGradesRequest.FinalGrade
+                };
+
+                studentGrades.Add(newGrade);
+
+                return CreatedAtAction(nameof(InputGrades), new { studentId = inputGradesRequest.StudentID }, new
+                {
+                    Message = "Grades inputted successfully for " + inputGradesRequest.Semester + ".",
+                    Result = response // Include the detailed response here
+                });
+            }
+        }
 
 
         [HttpPut("{teacherId}/UpdateGrades/{studentId}")]
@@ -274,7 +353,7 @@ namespace StudentGradeManager.Controllers
                 return Ok("No grades found for the students assigned to this teacher.");
             }
 
-            double totalWeightedGrades = 0;
+            double totalGrades = 0;
             int count = 0;
 
             foreach (var grade in studentGradesForTeacher)
@@ -285,18 +364,17 @@ namespace StudentGradeManager.Controllers
                 if (midterm != 0 || final != 0)
                 {
                     double average = (midterm + final) / (midterm > 0 && final > 0 ? 2 : 1);
-                    totalWeightedGrades += average;
+                    totalGrades += average;
                     count++;
                 }
             }
 
-            double? gwa = count > 0 ? totalWeightedGrades / count : (double?)null;
-
+            double? gwa = count > 0 ? totalGrades / count : (double?)null;
             return Ok(new { TeacherID = teacherId, Semester = semester, GWA = gwa });
         }
 
-        // Generate Performance Report for a Student
-        [HttpGet("PerformanceReport/{teacherId}/{semester}")]
+            // Generate Performance Report for a Student
+            [HttpGet("PerformanceReport/{teacherId}/{semester}")]
         public ActionResult<object> GeneratePerformanceReport(int teacherId, string semester)
         {
             // Validate the semester input

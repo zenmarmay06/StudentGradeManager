@@ -16,6 +16,7 @@ namespace StudentGradeManager.Store
         [Required]
         [Range(0, 100)]
         public double FinalGrade { get; set; }
+        public int StudentID { get; set; }
         public int CourseID { get; set; }
     }
 
