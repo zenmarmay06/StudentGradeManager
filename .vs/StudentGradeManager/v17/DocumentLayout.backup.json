@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\oop\\studentgrademanager\\studentgrademanager\\studentgrademanager\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\oop\\studentgrademanager\\studentgrademanager\\studentgrademanager\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Controllers\\LoginController.cs",
+              "ToolTip": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "StudentGradeManager\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T16:37:54.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Controllers\\AdminController.cs",
+              "ToolTip": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "StudentGradeManager\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T16:37:21.279Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

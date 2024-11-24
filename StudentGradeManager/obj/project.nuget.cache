@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1QdSo095pIcUgtOeRKVHHJi+Kh+fxYgOqLv0O0Fey34FUB3k1pf+vBjnhT8KuDuPvMZdlveKVUODVxucCMH0/A==",
+  "dgSpecHash": "cOAO9DC7kfk=",
   "success": true,
-  "projectFilePath": "D:\\OOP\\StudentGradeManager\\StudentGradeManager - Copy (2)\\StudentGradeManager\\StudentGradeManager.csproj",
+  "projectFilePath": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zende\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Zende\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
@@ -24,5 +24,46 @@
     "C:\\Users\\Zende\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Zende\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 6.12.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Swashbuckle.AspNetCore.SwaggerUI' 5.6.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-qrmm-w75w-3wpx",
+      "libraryId": "Swashbuckle.AspNetCore.SwaggerUI",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.12.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 6.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
