@@ -827,11 +827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+      "projectUniqueName": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
       "projectName": "StudentGradeManager",
-      "projectPath": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+      "projectPath": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
       "packagesPath": "C:\\Users\\Zende\\.nuget\\packages\\",
-      "outputPath": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\obj\\",
+      "outputPath": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -920,44 +920,10 @@
   },
   "logs": [
     {
-      "code": "NU1902",
+      "code": "NU1900",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 6.12.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Swashbuckle.AspNetCore.SwaggerUI' 5.6.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-qrmm-w75w-3wpx",
-      "libraryId": "Swashbuckle.AspNetCore.SwaggerUI",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.12.2 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "libraryId": "System.IdentityModel.Tokens.Jwt",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Text.Json' 6.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net5.0"
-      ]
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
     }
   ]
 }

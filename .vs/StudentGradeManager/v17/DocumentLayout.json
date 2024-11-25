@@ -1,13 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\",
+  "WorkspaceRootPath": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\oop\\studentgrademanager\\studentgrademanager\\studentgrademanager\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\store\\stdudentperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\store\\stdudentperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\store\\inputgradesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\store\\inputgradesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\store\\courseaassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\store\\courseaassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\store\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\store\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\studentgrademanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\studentgrademanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\oop\\studentgrademanager\\studentgrademanager\\studentgrademanager\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|f:\\zenmaranduyan_bsit2a\\studentgrademanager\\studentgrademanager\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1C6B94C-DD58-4F6C-B5CC-24CDCA89E617}|StudentGradeManager\\StudentGradeManager.csproj|solutionrelative:studentgrademanager\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,28 +59,135 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "StudentGradeManager\\Controllers\\LoginController.cs",
-              "ToolTip": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "StudentGradeManager\\Controllers\\LoginController.cs",
+              "Title": "StdudentPerformance.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\StdudentPerformance.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Store\\StdudentPerformance.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\StdudentPerformance.cs",
+              "RelativeToolTip": "StudentGradeManager\\Store\\StdudentPerformance.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:37:54.368Z",
+              "WhenOpened": "2024-11-25T14:30:36.513Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "InputGradesRequest.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\InputGradesRequest.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Store\\InputGradesRequest.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\InputGradesRequest.cs",
+              "RelativeToolTip": "StudentGradeManager\\Store\\InputGradesRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:30:34.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseAassignment.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\CourseAassignment.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Store\\CourseAassignment.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\CourseAassignment.cs",
+              "RelativeToolTip": "StudentGradeManager\\Store\\CourseAassignment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:30:32.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Course.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\Course.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Store\\Course.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Store\\Course.cs",
+              "RelativeToolTip": "StudentGradeManager\\Store\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:30:29.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Controllers\\StudentController.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "StudentGradeManager\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:29:25.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Controllers\\TeacherController.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\TeacherController.cs",
+              "RelativeToolTip": "StudentGradeManager\\Controllers\\TeacherController.cs",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAAAJ4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:28:52.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentGradeManager.csproj",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+              "RelativeDocumentMoniker": "StudentGradeManager\\StudentGradeManager.csproj",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+              "RelativeToolTip": "StudentGradeManager\\StudentGradeManager.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-25T14:28:20.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\appsettings.json",
+              "RelativeDocumentMoniker": "StudentGradeManager\\appsettings.json",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\appsettings.json",
+              "RelativeToolTip": "StudentGradeManager\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-25T14:22:45.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Startup.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Startup.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Startup.cs",
+              "RelativeToolTip": "StudentGradeManager\\Startup.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:22:10.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "StudentGradeManager\\Controllers\\LoginController.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "StudentGradeManager\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAkwOIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T16:37:54.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AdminController.cs",
-              "DocumentMoniker": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\AdminController.cs",
+              "DocumentMoniker": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "StudentGradeManager\\Controllers\\AdminController.cs",
-              "ToolTip": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\Controllers\\AdminController.cs",
+              "ToolTip": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\Controllers\\AdminController.cs",
               "RelativeToolTip": "StudentGradeManager\\Controllers\\AdminController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:37:21.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T16:37:21.279Z"
             }
           ]
         }

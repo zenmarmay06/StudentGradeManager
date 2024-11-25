@@ -11,11 +11,11 @@ namespace StudentGradeManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
+
     public class StudentController : ControllerBase
     {
         private List<Teacher> teachers => LoginController.Teachers;
-       
+
         private List<Student> students => LoginController.Students;
         private List<CourseAssignment> courseAssignments => AdminController.CourseAssignments;
         private static List<Course> courses = new List<Course>()
@@ -45,8 +45,17 @@ namespace StudentGradeManager.Controllers
 
 
 
-        
-       
+
+        [HttpGet("Students/{id}")]
+        public ActionResult<Student> GetStudent(int id)
+        {
+            var student = students.FirstOrDefault(s => s.StudentID == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            return Ok(student);
+        }
 
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] Student updatedStudent)
@@ -92,13 +101,11 @@ namespace StudentGradeManager.Controllers
                 .Select(ca => new
                 {
                     ca.CourseID,
-            // Dynamically fetch the CourseName from the courses list
-            CourseName = courses.FirstOrDefault(course => course.CourseID == ca.CourseID)?.CourseName ?? "Course Name Not Available",
-            // Fetch the assigned Teacher's name from the teachers list
-            Teacher = teachers.FirstOrDefault(t => t.TeacherID == ca.TeacherID)?.Name ?? "Teacher Not Assigned",
-            // Include additional assignment details like YearSection and Semester
-            AssignedYearSection = ca.YearSection,
-                    AssignedSemester = ca.Semester
+                    // Dynamically fetch the CourseName from the courses list
+                    CourseName = courses.FirstOrDefault(course => course.CourseID == ca.CourseID)?.CourseName ?? "Course Name Not Available",
+                    // Fetch the assigned Teacher's name from the teachers list
+                    Teacher = teachers.FirstOrDefault(t => t.TeacherID == ca.TeacherID)?.Name ?? "Teacher Not Assigned"
+
                 })
                 .ToList();
 
@@ -160,4 +167,4 @@ namespace StudentGradeManager.Controllers
 
     }
 }
-    
+

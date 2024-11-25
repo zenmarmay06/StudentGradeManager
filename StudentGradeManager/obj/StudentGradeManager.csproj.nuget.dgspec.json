@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj": {}
+    "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj": {}
   },
   "projects": {
-    "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj": {
+    "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+        "projectUniqueName": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
         "projectName": "StudentGradeManager",
-        "projectPath": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
+        "projectPath": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager.csproj",
         "packagesPath": "C:\\Users\\Zende\\.nuget\\packages\\",
-        "outputPath": "F:\\OOP\\StudentGradeManager\\StudentGradeManager\\StudentGradeManager\\obj\\",
+        "outputPath": "F:\\ZenmarAnduyan_BSIT2A\\StudentGradeManager\\StudentGradeManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
